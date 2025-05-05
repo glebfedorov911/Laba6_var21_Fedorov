@@ -136,3 +136,6 @@ let getData = getFromPhp(`/Laba6_var21_Fedorov/back/endpoints/aboutSpace.php?use
 getTime();
 setInterval(getTime, 1000);
 redirectToLogin();
+
+document.querySelector(".username").innerText = JSON.parse(localStorage.getItem("userInfo"))["login"];
+document.querySelector(".visit").innerText = `Количество посещений: ${JSON.parse(localStorage.getItem("userInfo"))["visit"]}`;

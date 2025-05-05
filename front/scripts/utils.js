@@ -1,6 +1,10 @@
 import {HTTPClient} from "./HTTPClient.js";
 
 
+/**
+ * Редиректит пользователя если он авторизован
+ *
+ */
 export function redirectUserIfAuth() {
     if (localStorage.getItem("userInfo")) {
         window.location.href = "/Laba6_var21_Fedorov/front/html/cabinet.html";
