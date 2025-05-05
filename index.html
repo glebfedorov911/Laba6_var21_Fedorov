@@ -1,0 +1,64 @@
+<!--Федоров 24вп1 вариант 21-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация пользователя</title>
+    <script src="front/scripts/jquery-3.7.1.min.js" defer></script>
+    <script type="module" src="front/scripts/HTTPClient.js" defer></script>
+    <script type="module" src="front/scripts/utils.js" defer></script>
+    <script type="module" src="front/scripts/signup.js" defer></script>
+    <link rel="stylesheet" href="front/styles/index.css">
+</head>
+<body>
+<div class="registration-container">
+    <div class="registration-card">
+        <h1 class="registration-title">Создать аккаунт</h1>
+        <p class="registration-subtitle">Заполните форму для регистрации</p>
+
+        <div class="form-group">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" placeholder="️✉example@mail.com" class="form-input">
+            <div id="emailError" class="error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="login">Логин</label>
+            <input type="text" id="login" placeholder="👤Придумайте логин" class="form-input">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" placeholder="📱+79991234567" class="form-input">
+            <div id="phoneError" class="error"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="place">Станция</label>
+            <div class="select-wrapper">
+                <select id="place" class="form-select">
+                    <option>Первая станция</option>
+                    <option>Вторая станция</option>
+                    <option>Третья станция</option>
+                    <option>Четвертая станция</option>
+                    <option>Пятая станция</option>
+                </select>
+                <span class="select-arrow">▼</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" placeholder="🔒Пароль" class="form-input">
+            <div id="passwordError" class="error"></div>
+        </div>
+
+        <button type="submit" class="submit-btn">Зарегистрироваться</button>
+        <div id="mainError" class="error"></div>
+
+        <p class="login-link">Уже есть аккаунт? <a href="front/html/login.html">Войти</a></p>
+    </div>
+</div>
+</body>
+</html>

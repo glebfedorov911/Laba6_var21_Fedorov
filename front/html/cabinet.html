@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный Кабинет</title>
+    <script src="../../front/scripts/jquery-3.7.1.min.js" defer></script>
+    <script type="module" src="../../front/scripts/HTTPClient.js" defer></script>
+    <script type="module" src="../../front/scripts/utils.js" defer></script>
+    <script type="module" src="../../front/scripts/cabinet.js" defer></script>
+    <link rel="stylesheet" href="../../front/styles/cabinet.css">
+</head>
+<body>
+<div class="dashboard-container">
+    <div class="dashboard-card">
+        <div class="dashboard-header">
+            <h1 class="username">Имя пользователя</h1>
+            <a href="/Laba6_var21_Fedorov/front/html/logout.html" class="logout-btn">Выйти из аккаунта</a>
+        </div>
+
+        <div class="table-container">
+            <table class="requests-table">
+                <thead>
+                <tr>
+                    <th>Номер заявки</th>
+                    <th>Название</th>
+                    <th>Ширина</th>
+                    <th>Высота</th>
+                    <th>Длина</th>
+                    <th>Категория</th>
+                    <th colspan="2">Действия</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dashboard-footer">
+            <button class="btn add-btn">Добавить заявку</button>
+            <div class="server-time">Серверное время: <span id="time">12:34:56</span></div>
+        </div>
+    </div>
+
+    <div id="request-form-modal" class="modal">
+        <div class="modal-content">
+            <form id="request-form">
+                <span class="close-btn">&times;</span>
+                <h2>Добавить новую заявку</h2>
+                <div class="form-group">
+                    <label for="request-name">Название</label>
+                    <input type="text" id="request-name" class="form-input" required>
+                    <div id="nameError" class="error"></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="request-width">Ширина</label>
+                        <input type="number" id="request-width" class="form-input" required>
+                        <div id="widthError" class="error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="request-height">Высота</label>
+                        <input type="number" id="request-height" class="form-input" required>
+                        <div id="heightError" class="error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="request-length">Длина</label>
+                        <input type="number" id="request-length" class="form-input" required>
+                        <div id="lengthError" class="error"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="request-category">Категория</label>
+                    <select id="request-category" class="form-input" required>
+                        <option value="Первая">Первая</option>
+                        <option value="Вторая">Вторая</option>
+                        <option value="Третья">Третья</option>
+                    </select>
+                </div>
+
+                <div class="btn submit-btn">Добавить заявку</div>
+                <div id="mainError" class="error"></div>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
